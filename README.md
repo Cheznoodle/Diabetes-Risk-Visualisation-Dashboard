@@ -1,4 +1,4 @@
-# Diabetes-Risk-Visualization-Dashboard
+# Diabetes-Risk-Visualisation-Dashboard
 
 An interactive R Shiny dashboard that lets you explore a 100,000-patient diabetes dataset through six linked, filterable visualisations — built to make patterns in age, BMI, smoking history, and clinical markers easy to see and easy to question.
 
