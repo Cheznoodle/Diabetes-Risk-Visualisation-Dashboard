@@ -85,27 +85,55 @@ diabetes-risk-visualization-dashboard/
 ```
  
 ## Getting started
- 
-### Prerequisites
-- [R](https://cran.r-project.org/) (4.0+) and [RStudio](https://posit.co/download/rstudio-desktop/)
-### Installation
- 
-1. Clone the repo:
+
+### Step 1: Install R
+
+R is the programming language the app is written in — RStudio needs it to run anything.
+
+1. Go to the [CRAN download page](https://cran.r-project.org/).
+2. Choose your operating system (Windows, macOS, or Linux) and follow the link.
+3. Download the latest installer for your OS and run it, accepting the default options.
+4. Confirm the install worked by opening a terminal (or Command Prompt) and running:
+   ```bash
+   R --version
+   ```
+   If it prints a version number, R is installed correctly.
+
+### Step 2: Install RStudio
+
+RStudio is the IDE used to open, edit, and run the app.
+
+1. Go to the [RStudio Desktop download page](https://posit.co/download/rstudio-desktop/).
+2. Download the free RStudio Desktop installer for your operating system.
+3. Run the installer and accept the default options. RStudio will automatically detect the R installation from Step 1.
+4. Open RStudio once to confirm it launches correctly — you should see four panels (Console, Source/Editor, Environment, and Files/Plots/Packages/Help).
+
+### Step 3: Get the project files
+
+Clone the repo:
 ```bash
-   git clone https://github.com/<your-username>/diabetes-risk-visualization-dashboard.git
-   cd diabetes-risk-visualization-dashboard
+git clone https://github.com/<your-username>/diabetes-risk-visualization-dashboard.git
 ```
-2. Install the required R packages:
+(Alternatively, download the repo as a ZIP from GitHub and extract it.)
+
+### Step 4: Install the required R packages
+
+In RStudio, open the **Console** panel (bottom-left by default) and run:
 ```r
-   install.packages(c("shiny", "shinythemes", "shinycssloaders",
-                       "ggplot2", "dplyr", "plotly", "cluster"))
+install.packages(c("shiny", "shinythemes", "shinycssloaders",
+                    "ggplot2", "dplyr", "plotly", "cluster"))
 ```
-3. Run the app (from R or RStudio, with the working directory set to the repo folder):
-```r
-   shiny::runApp("app.R")
-```
-   The dashboard will open in your default browser (or the RStudio Viewer pane).
- 
+This only needs to be done once per machine. Let it finish before moving on — it may take a few minutes the first time.
+
+### Step 5: Run the app in RStudio
+
+1. In RStudio, go to **File → Open File...** and select `app.R` from the cloned/extracted project folder.
+2. Once `app.R` is open in the Source/Editor panel, look at the top-right of that panel — a green **"Run App"** button will appear (RStudio detects it's a Shiny app automatically).
+3. Click **Run App**. RStudio will launch the dashboard, either in the built-in **Viewer** pane or in your default web browser.
+4. To stop the app, click the red stop-sign icon in the Console, or close the app window/tab.
+
+> **Tip:** Make sure `app.R` and `diabetes_prediction_dataset.csv` stay in the same folder — the app reads the CSV using a relative path, so RStudio's working directory needs to be set to that project folder (opening `app.R` directly, as above, takes care of this automatically).
+
 ## Design decisions & trade-offs
  
 - **k-means over a supervised model:** the brief here was exploratory segmentation, not prediction, so an unsupervised approach (k-means on BMI + hypertension) was used to surface a simple risk grouping rather than building and validating a classifier.
