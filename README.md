@@ -82,13 +82,12 @@ diabetes-risk-visualization-dashboard/
 ├── diabetes_prediction_dataset.csv # Source dataset (100,000 rows)
 ├── README.md
 ├── .gitignore
-└── LICENSE
 ```
  
 ## Getting started
  
 ### Prerequisites
-- [R](https://cran.r-project.org/) (4.0+) and [RStudio](https://posit.co/download/rstudio-desktop/) (recommended, not required)
+- [R](https://cran.r-project.org/) (4.0+) and [RStudio](https://posit.co/download/rstudio-desktop/)
 ### Installation
  
 1. Clone the repo:
