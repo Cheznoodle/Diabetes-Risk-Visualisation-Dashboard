@@ -16,7 +16,8 @@ Diabetes prevalence and its risk factors (BMI, hypertension, heart disease, smok
  
 - **File:** `diabetes_prediction_dataset.csv`
 - **Size:** 100,000 patient records, 9 columns
-- **Source:** Publicly available diabetes prediction dataset (commonly distributed via Kaggle) combining demographic and clinical variables associated with diabetes onset
+- **Source:** https://www.kaggle.com/datasets/iammustafatz/diabetes-prediction-dataset
+
 | Column | Type | Description |
 |---|---|---|
 | `gender` | categorical | Female / Male / Other |
